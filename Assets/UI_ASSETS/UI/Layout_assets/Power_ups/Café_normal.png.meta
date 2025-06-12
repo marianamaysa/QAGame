@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "Caf\xE9_normal_0": -7964355693422907188
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

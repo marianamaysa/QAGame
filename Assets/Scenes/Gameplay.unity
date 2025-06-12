@@ -257,7 +257,6 @@ MonoBehaviour:
   codeSpriteCorrect: {fileID: 0}
   codeSpriteBugged: {fileID: 0}
   answerImage: {fileID: 0}
-  timeToAnswer: 1
   bugsManagerData: {fileID: 0}
 --- !u!1 &47912220
 GameObject:
@@ -474,7 +473,6 @@ MonoBehaviour:
   codeSpriteCorrect: {fileID: 0}
   codeSpriteBugged: {fileID: 0}
   answerImage: {fileID: 0}
-  timeToAnswer: 1
   bugsManagerData: {fileID: 0}
 --- !u!1 &224288041
 GameObject:
@@ -1763,7 +1761,6 @@ MonoBehaviour:
   codeSpriteCorrect: {fileID: 0}
   codeSpriteBugged: {fileID: 0}
   answerImage: {fileID: 0}
-  timeToAnswer: 1
   bugsManagerData: {fileID: 0}
 --- !u!1 &641221629
 GameObject:
@@ -3154,7 +3151,6 @@ MonoBehaviour:
   codeSpriteCorrect: {fileID: 0}
   codeSpriteBugged: {fileID: 0}
   answerImage: {fileID: 0}
-  timeToAnswer: 1
   bugsManagerData: {fileID: 0}
 --- !u!1 &1418591489
 GameObject:
@@ -3294,7 +3290,6 @@ MonoBehaviour:
   codeSpriteCorrect: {fileID: 0}
   codeSpriteBugged: {fileID: 0}
   answerImage: {fileID: 0}
-  timeToAnswer: 1
   bugsManagerData: {fileID: 0}
 --- !u!1 &1435328362
 GameObject:
@@ -3524,7 +3519,6 @@ MonoBehaviour:
   codeSpriteCorrect: {fileID: 0}
   codeSpriteBugged: {fileID: 0}
   answerImage: {fileID: 0}
-  timeToAnswer: 1
   bugsManagerData: {fileID: 0}
 --- !u!1 &1508020031
 GameObject:
@@ -3981,7 +3975,6 @@ MonoBehaviour:
   codeSpriteCorrect: {fileID: 0}
   codeSpriteBugged: {fileID: 0}
   answerImage: {fileID: 0}
-  timeToAnswer: 1
   bugsManagerData: {fileID: 0}
 --- !u!1 &1867100966
 GameObject:
@@ -4121,7 +4114,6 @@ MonoBehaviour:
   codeSpriteCorrect: {fileID: 0}
   codeSpriteBugged: {fileID: 0}
   answerImage: {fileID: 0}
-  timeToAnswer: 1
   bugsManagerData: {fileID: 0}
 --- !u!1 &1894767959
 GameObject:
@@ -4540,7 +4532,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2032059948}
-  - component: {fileID: 2032059947}
   - component: {fileID: 2032059949}
   m_Layer: 0
   m_Name: GameManager
@@ -4549,23 +4540,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2032059947
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2032059946}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f556f78d081ffa243883376419598625, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playBtn: {fileID: 0}
-  creditsBtn: {fileID: 0}
-  closeCreditsBtn: {fileID: 0}
-  quitBtn: {fileID: 0}
-  creditsPanel: {fileID: 0}
 --- !u!4 &2032059948
 Transform:
   m_ObjectHideFlags: 0
@@ -4605,6 +4579,9 @@ MonoBehaviour:
   - {fileID: 1867100966}
   - {fileID: 2111365588}
   slider: {fileID: 1435328364}
+  pointsToWin: 10
+  currentPoints: 0
+  timerWaitPerButton: 1
 --- !u!1 &2050022416
 GameObject:
   m_ObjectHideFlags: 0
@@ -4778,7 +4755,6 @@ MonoBehaviour:
   codeSpriteCorrect: {fileID: 0}
   codeSpriteBugged: {fileID: 0}
   answerImage: {fileID: 0}
-  timeToAnswer: 1
   bugsManagerData: {fileID: 0}
 --- !u!1 &2141887650
 GameObject:
@@ -5089,7 +5065,6 @@ MonoBehaviour:
   codeSpriteCorrect: {fileID: 0}
   codeSpriteBugged: {fileID: 0}
   answerImage: {fileID: 0}
-  timeToAnswer: 1
   bugsManagerData: {fileID: 0}
 --- !u!222 &7308360383409785870
 CanvasRenderer:

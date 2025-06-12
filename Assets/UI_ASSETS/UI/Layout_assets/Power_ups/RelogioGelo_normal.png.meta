@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      RelogioGelo_normal_0: 6954149765511360949
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
