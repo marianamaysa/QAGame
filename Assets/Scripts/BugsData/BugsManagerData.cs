@@ -7,20 +7,20 @@ using UnityEngine.UI;
 
 public class BugsManagerData : MonoBehaviour
 {
-   
+
     public List<GameObject> buttonObjects;
     public Slider slider;
 
     public float pointsToWin = 10;
     public float currentPoints = 0;
 
-    public int timerWaitPerButton = 1; 
+    public int timerWaitPerButton = 1;
 
     private void Start()
     {
         foreach (var button in buttonObjects)
         {
-            button.gameObject.GetComponent<ButtonsScripts>().bugsManagerData = this; 
+            button.gameObject.GetComponent<ButtonsScripts>().bugsManagerData = this;
             button.gameObject.GetComponent<ButtonsScripts>().SetTimeToAnswer(timerWaitPerButton);
         }
     }
@@ -40,9 +40,32 @@ public class BugsManagerData : MonoBehaviour
 
     private void VerifySliderPoints()
     {
-        if(slider.value >= slider.maxValue * 0.75f)
+        if (slider.value >= slider.maxValue * 0.75f)
         {
             slider.fillRect.GetComponent<Image>().color = Color.green;
+        }
+    }
+
+    public void SelectButton(GameObject button)
+    {
+        foreach (var btn in buttonObjects)
+        {
+            if (btn == button)
+            {
+                btn.GetComponent<ButtonsScripts>().OpenScript();
+            }
+            else
+            {
+                btn.SetActive(false);
+            }
+        }
+    }
+
+    public void ResetButtons(GameObject button)
+    {
+        foreach (var btn in buttonObjects)
+        {
+            btn.SetActive(true);
         }
     }
 }
