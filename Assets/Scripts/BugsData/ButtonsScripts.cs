@@ -5,12 +5,12 @@ using UnityEngine.UI;
 
 public class ButtonsScripts : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
-    [SerializeField] private bool isBugged = false;
+     public bool isBugged = false;
     [SerializeField] private Sprite codeSpriteCorrect;
     [SerializeField] private Sprite codeSpriteBugged;
     [SerializeField] private GameObject answerImage;
 
-    [SerializeField] private GameObject scriptPanel;
+     public GameObject scriptPanel;
     [SerializeField] private Button closeScriptPanel;
     private ScriptVerifier scriptVerifier;
     private float timeToAnswer;
@@ -19,19 +19,32 @@ public class ButtonsScripts : MonoBehaviour, IPointerDownHandler, IPointerUpHand
     public void SetTimeToAnswer(float time)
     {
         timeToAnswer = time;
+        AttVerifierScript();
     }
 
     public BugsManagerData bugsManagerData;
 
-    private bool isPointerHeld = false;
-    private float pointerHoldTime = 0f;
 
     private void Start()
     {
         closeScriptPanel.onClick.AddListener(CloseScript);
+    }
+
+    public void AttVerifierScript()
+    {
         scriptVerifier = scriptPanel.GetComponent<ScriptVerifier>();
         scriptVerifier.isBugged = isBugged;
+        scriptVerifier.timeToAnswer = timeToAnswer;
+        scriptVerifier.bugsManagerData = bugsManagerData;
+
     }
+    public void SetImageScript(Sprite image)
+    {
+        scriptPanel.GetComponent<Image>().sprite = image;
+        AttVerifierScript();
+    }
+
+
     public void SetBugged()
     {
         isBugged = true;
@@ -47,9 +60,6 @@ public class ButtonsScripts : MonoBehaviour, IPointerDownHandler, IPointerUpHand
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        isPointerHeld = true;
-        pointerHoldTime = 0f;
-        Debug.Log("Botão pressionado");
         bugsManagerData.SelectButton(this.gameObject);
         OpenScript();
     }
@@ -57,35 +67,7 @@ public class ButtonsScripts : MonoBehaviour, IPointerDownHandler, IPointerUpHand
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        isPointerHeld = false;
-        pointerHoldTime = 0f;
-        Debug.Log("Botão liberado");
-    }
-
-    private void Update()
-    {
-        if (isPointerHeld)
-        {
-            pointerHoldTime += Time.deltaTime;
-            if (pointerHoldTime >= timeToAnswer)
-            {
-                Debug.Log("Botão pressionado tempo suficiente");
-                OnPointerHeldEnough();
-                isPointerHeld = false;
-            }
-        }
-    }
-
-    private void OnPointerHeldEnough()
-    {
-        if (isBugged)
-        {
-            if (answerImage != null)
-            {
-                answerImage.SetActive(true);
-            }
-            bugsManagerData.AddSliderPoints();
-        }
+        
     }
 
     public void OpenScript()

@@ -3,10 +3,17 @@ using UnityEngine;
 using TMPro;
 using System;
 using UnityEngine.UI;
+using UnityEngine.InputSystem.Composites;
+using System.Linq;
 
 
 public class BugsManagerData : MonoBehaviour
 {
+    [Header("Bugs Images")]
+    public List<Sprite> bugsImages;
+    [Header("Normal Images")]
+    public List<Sprite> normalImages;
+
 
     public List<GameObject> buttonObjects;
     public Slider slider;
@@ -23,6 +30,44 @@ public class BugsManagerData : MonoBehaviour
             button.gameObject.GetComponent<ButtonsScripts>().bugsManagerData = this;
             button.gameObject.GetComponent<ButtonsScripts>().SetTimeToAnswer(timerWaitPerButton);
         }
+        RandomImagesAndBugs();
+    }
+
+    public void RandomImagesAndBugs()
+    {
+        List<GameObject> buttons = buttonObjects.OrderBy(x => UnityEngine.Random.value).ToList();
+
+        int totaButtons = buttons.Count;
+        int buttonsHalf = totaButtons / 2;
+
+        for (int i = 0; i < totaButtons; i++)
+        {
+            var button = buttons[i];
+            Sprite selectedImage = null;
+            bool useBugImage = (i < buttonsHalf);
+
+            if (useBugImage && bugsImages.Count > 0)
+            {
+                int randomIndex = UnityEngine.Random.Range(0, bugsImages.Count);
+                selectedImage = bugsImages[randomIndex];
+
+                var buttonScript = button.gameObject.GetComponent<ButtonsScripts>();
+                if (buttonScript != null)
+                {
+                    buttonScript.isBugged = true;
+                    buttonScript.AttVerifierScript();
+                }
+            }
+            else if (normalImages.Count > 0)
+            {
+                int randomIndex = UnityEngine.Random.Range(0, normalImages.Count);
+                selectedImage = normalImages[randomIndex];
+            }
+
+            var buttonScriptImage = button.gameObject.GetComponent<ButtonsScripts>();
+            buttonScriptImage.SetImageScript(selectedImage);
+        }
+
     }
     public void AddSliderPoints()
     {

@@ -3077,6 +3077,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a69789a70f61434286b32404d837084, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bugsImages:
+  - {fileID: 21300000, guid: 61e48de6551f90746a568c3550e016f9, type: 3}
+  - {fileID: 21300000, guid: ed9a572f73825e24f954aca936125c9d, type: 3}
+  - {fileID: 21300000, guid: 96f5bd6d61db67f49bea12de14a79cd6, type: 3}
+  - {fileID: 21300000, guid: 2893779cb82a5934bb8d3f13c717ca02, type: 3}
+  - {fileID: 21300000, guid: 9fc9bb4e726d3ea4797673e5fccf3b53, type: 3}
+  - {fileID: 21300000, guid: 3c4136559fe10ff4abea7aff8ac50ae7, type: 3}
+  - {fileID: 21300000, guid: a59e2e6ba06d44c4b9bd2bbfc26a17a0, type: 3}
+  - {fileID: 21300000, guid: fbbaf5a68a0708b499f91cfca145bfc8, type: 3}
+  - {fileID: 21300000, guid: 0307680435f0d644f8fea6e3ebe4966c, type: 3}
+  - {fileID: 21300000, guid: 050f5a2302e6e49469b8b4e8bd4139f9, type: 3}
+  - {fileID: 21300000, guid: 0a186ec7ce10f61498c5d5c1c9a8eb87, type: 3}
+  normalImages:
+  - {fileID: 21300000, guid: a19bab6dfc90c1b4caba8bb4fe4a78c8, type: 3}
+  - {fileID: 21300000, guid: 22562439ff931584da6d1179cbfdc02f, type: 3}
+  - {fileID: 21300000, guid: 8ac91066983c15a40a4ca0f865cd33f7, type: 3}
+  - {fileID: 21300000, guid: 0167adb27f0845f43a1baeaff517c65e, type: 3}
+  - {fileID: 21300000, guid: 346ac539ffce3e4478ab31b1cb7a0daa, type: 3}
+  - {fileID: 21300000, guid: 789d8da4c4869044fb40e852c26b27b3, type: 3}
+  - {fileID: 21300000, guid: a830a1a20a825f64b9ae5443d32da13b, type: 3}
+  - {fileID: 21300000, guid: 68335cd2cdf2fe545a5a7621ca545975, type: 3}
+  - {fileID: 21300000, guid: e0c96abc60bcddd4a96c922a14008f51, type: 3}
+  - {fileID: 21300000, guid: 6c927b60e22036641a41bd7a0b40a76c, type: 3}
+  - {fileID: 21300000, guid: 4ada15ec775721c429d9cd6f9b1956ed, type: 3}
+  - {fileID: 21300000, guid: d14f727d6e983c647ae782d34c41d4d1, type: 3}
+  - {fileID: 21300000, guid: 4cc0b8633c4751d49b52eafa989a8379, type: 3}
+  - {fileID: 21300000, guid: 741ba90ada68fc54bbce68051e68d5d7, type: 3}
+  - {fileID: 21300000, guid: 23d520841e03d314e9c4a7d9076d6bec, type: 3}
+  - {fileID: 21300000, guid: 2ad3dc05d8deb054a9d7501e91c45ccd, type: 3}
+  - {fileID: 21300000, guid: 4a15688c249bd8d4d8e9471976c4641a, type: 3}
+  - {fileID: 21300000, guid: 2a51241ee92a4f04a83768b6a5d65fba, type: 3}
   buttonObjects:
   - {fileID: 1106466300065594534}
   - {fileID: 534690035}

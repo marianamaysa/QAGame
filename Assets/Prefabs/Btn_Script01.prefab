@@ -271,7 +271,7 @@ MonoBehaviour:
   codeSpriteCorrect: {fileID: 0}
   codeSpriteBugged: {fileID: 0}
   answerImage: {fileID: 0}
-  scritpPanel: {fileID: 7665438796240567572}
+  scriptPanel: {fileID: 7665438796240567572}
   closeScriptPanel: {fileID: 6427280606453246033}
   bugsManagerData: {fileID: 0}
 --- !u!1 &7665438796240567572
@@ -363,6 +363,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75406b1174fd74747b4f95d0239eda41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isBugged: 0
+  isPointerHeld: 0
+  timeToAnswer: 0
+  pointerHoldTime: 0
+  bugsManagerData: {fileID: 0}
 --- !u!1 &7710613223116162333
 GameObject:
   m_ObjectHideFlags: 0
