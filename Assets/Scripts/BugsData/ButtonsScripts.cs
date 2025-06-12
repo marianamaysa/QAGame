@@ -10,8 +10,9 @@ public class ButtonsScripts : MonoBehaviour, IPointerDownHandler, IPointerUpHand
     [SerializeField] private Sprite codeSpriteBugged;
     [SerializeField] private GameObject answerImage;
 
-    [SerializeField] private GameObject scritpPanel;
+    [SerializeField] private GameObject scriptPanel;
     [SerializeField] private Button closeScriptPanel;
+    private ScriptVerifier scriptVerifier;
     private float timeToAnswer;
 
    
@@ -28,6 +29,8 @@ public class ButtonsScripts : MonoBehaviour, IPointerDownHandler, IPointerUpHand
     private void Start()
     {
         closeScriptPanel.onClick.AddListener(CloseScript);
+        scriptVerifier = scriptPanel.GetComponent<ScriptVerifier>();
+        scriptVerifier.isBugged = isBugged;
     }
     public void SetBugged()
     {
@@ -87,12 +90,12 @@ public class ButtonsScripts : MonoBehaviour, IPointerDownHandler, IPointerUpHand
 
     public void OpenScript()
     {
-        scritpPanel.SetActive(true);
+        scriptPanel.SetActive(true);
     }
 
     public void CloseScript()
     {
-        scritpPanel.SetActive(false);
+        scriptPanel.SetActive(false);
         bugsManagerData.ResetButtons(this.gameObject);
     }
 }
