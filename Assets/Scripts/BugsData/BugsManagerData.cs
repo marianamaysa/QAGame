@@ -55,23 +55,20 @@ public class BugsManagerData : MonoBehaviour
 
     public void OnAcelerarPressed()
     {
-        Debug.Log("[BugsManager] Permissão de acelerar concedida");
-        canSpeed = true;
-    }
-    public void SpeedCode(float duration)
-    {
-        Debug.Log("SpeedCode called. isUsedOnce=" + isUsedOnce);
-        if (!isUsedOnce && canSpeed)
+        if (!isUsedOnce)
         {
-            Debug.Log("Applying speed for " + duration + "s.");
-            StartCoroutine(ApplySpeed(duration));
-            isUsedOnce = true;
-            canSpeed = false;
+            Debug.Log("[BugsManager] Aceleracao liberada");
+            canSpeed = true;
         }
         else
         {
-            Debug.Log("SpeedCode skipped — either already used or not permitted.");
+            Debug.LogWarning("[BugsManager] Aceleracao ja foi usada");
         }
+    }
+    public void SpeedCode()
+    {
+        isUsedOnce = true;
+        canSpeed = false;
     }
 
     private IEnumerator ApplySpeed(float duration)
