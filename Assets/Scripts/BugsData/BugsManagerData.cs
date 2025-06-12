@@ -44,7 +44,6 @@ public class BugsManagerData : MonoBehaviour
         {
             Debug.Log("Start: timerWaitPerButton = " + timerWaitPerButton);
             ResetTimersForAllButtons();
-            RandomImagesAndBugs();
             /*
             button.gameObject.GetComponent<ButtonsScripts>().bugsManagerData = this;
             button.gameObject.GetComponent<ButtonsScripts>().SetTimeToAnswer(timerWaitPerButton);

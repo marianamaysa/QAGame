@@ -12,6 +12,7 @@ public class SoundManager : MonoBehaviour
     [Header("Referências do Botão")]
     [SerializeField] private Image buttonImage;
     [SerializeField] private Sprite[] sprites; // Sprites[0] = som ligado, Sprites[1] = som mudo
+    public AudioSource buttonAudioSource; // Fonte de áudio para o som do botão
 
     private void Awake()
     {
@@ -39,6 +40,13 @@ public class SoundManager : MonoBehaviour
         UpdateAudioAndButton();
         SaveMuteState();
     }
+
+    public void PlayButtonSound()
+    {
+        buttonAudioSource.Play();
+    }
+
+
 
     // Atualiza o volume e o sprite do botão
     private void UpdateAudioAndButton()

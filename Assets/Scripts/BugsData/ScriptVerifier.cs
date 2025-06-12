@@ -49,24 +49,19 @@ public class ScriptVerifier : MonoBehaviour, IPointerDownHandler, IPointerUpHand
 
     private void OnPointerHeldEnough()
     {
-        Debug.Log("resolucao completa em: " + pointerHoldTime + "s");
+
 
         timeToAnswer = originalTimeToAnswer;
-        Debug.Log("restaurado timeToAnswer = " + timeToAnswer);
+
 
         if (isBugged && !bugFound)
         {
             bugFound = true;
             BugsManagerData.Instance.AddSliderPoints();
-
-            var bs = GetComponent<ButtonsScripts>();
-            if (bs != null)
-                bs.bugFound = true;
+            ButtonsScripts btnScript = this.GetComponentInParent<ButtonsScripts>();
+            btnScript.bugFound = true;
         }
-        else
-        {
-            Debug.Log("codigo correto");
-        }
+        
 
         timeToAnswer = originalTimeToAnswer;
     }

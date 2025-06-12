@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class ButtonsScripts : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
+public class ButtonsScripts : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerEnterHandler
 {
     public bool isBugged = false;
     public bool bugFound = false;
@@ -83,5 +83,10 @@ public class ButtonsScripts : MonoBehaviour, IPointerDownHandler, IPointerUpHand
     {
         scriptPanel.SetActive(false);
         bugsManagerData.ResetButtons(this.gameObject);
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        SoundManager.Instance.PlayButtonSound();
     }
 }

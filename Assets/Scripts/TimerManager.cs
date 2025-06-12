@@ -9,12 +9,15 @@ public class TimerManager : MonoBehaviour
 
     [SerializeField] private TMP_Text timerTxt;
 
+    [SerializeField] private GameObject derrotaTela;
+ 
     private bool isPaused = false;
     private bool isPausedOnce = false;
 
 
     void Start()
     {
+        derrotaTela.SetActive(false);
         currentTime = startTimer;
     }
 
@@ -33,6 +36,12 @@ public class TimerManager : MonoBehaviour
             {
                 timerTxt.text = currentTime.ToString("0:00");
             }
+        }
+        if(currentTime <= 0)
+        {
+            currentTime = 0;
+            timerTxt.text = "00:00";
+            derrotaTela.SetActive(true);
         }
     }
 
