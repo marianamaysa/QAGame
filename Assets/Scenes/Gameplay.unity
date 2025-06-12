@@ -703,6 +703,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Btn_Script01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4982481851455213371, guid: e2a19500c5278fa48b6c27bdd2f5042c, type: 3}
+      propertyPath: bugsManagerData
+      value: 
+      objectReference: {fileID: 2032059949}
     - target: {fileID: 6346490059098678281, guid: e2a19500c5278fa48b6c27bdd2f5042c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -880,6 +884,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Btn_Script01 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4982481851455213371, guid: e2a19500c5278fa48b6c27bdd2f5042c, type: 3}
+      propertyPath: bugsManagerData
+      value: 
+      objectReference: {fileID: 2032059949}
     - target: {fileID: 6346490059098678281, guid: e2a19500c5278fa48b6c27bdd2f5042c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1173,7 +1181,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 641221632}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2032059949}
+        m_TargetAssemblyTypeName: BugsManagerData, Assembly-CSharp
+        m_MethodName: OnAcelerarPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 2
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &641221632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1524,6 +1544,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Btn_Script01 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4982481851455213371, guid: e2a19500c5278fa48b6c27bdd2f5042c, type: 3}
+      propertyPath: bugsManagerData
+      value: 
+      objectReference: {fileID: 2032059949}
     - target: {fileID: 6346490059098678281, guid: e2a19500c5278fa48b6c27bdd2f5042c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1861,6 +1885,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Btn_Script01 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 4982481851455213371, guid: e2a19500c5278fa48b6c27bdd2f5042c, type: 3}
+      propertyPath: bugsManagerData
+      value: 
+      objectReference: {fileID: 2032059949}
     - target: {fileID: 6346490059098678281, guid: e2a19500c5278fa48b6c27bdd2f5042c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2445,7 +2473,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1138700273}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2032059949}
+        m_TargetAssemblyTypeName: BugsManagerData, Assembly-CSharp
+        m_MethodName: OnRevealPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1138700273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2496,6 +2536,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Btn_Script01 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 4982481851455213371, guid: e2a19500c5278fa48b6c27bdd2f5042c, type: 3}
+      propertyPath: bugsManagerData
+      value: 
+      objectReference: {fileID: 2032059949}
     - target: {fileID: 6346490059098678281, guid: e2a19500c5278fa48b6c27bdd2f5042c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2635,6 +2679,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Btn_Script01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4982481851455213371, guid: e2a19500c5278fa48b6c27bdd2f5042c, type: 3}
+      propertyPath: bugsManagerData
+      value: 
+      objectReference: {fileID: 2032059949}
     - target: {fileID: 6346490059098678281, guid: e2a19500c5278fa48b6c27bdd2f5042c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3122,7 +3170,9 @@ MonoBehaviour:
   slider: {fileID: 1435328364}
   pointsToWin: 10
   currentPoints: 0
-  timerWaitPerButton: 1
+  timerWaitPerButton: 5
+  speedValue: 2
+  canSpeed: 0
 --- !u!1 &2050022416
 GameObject:
   m_ObjectHideFlags: 0
@@ -3170,6 +3220,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Btn_Script01 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 4982481851455213371, guid: e2a19500c5278fa48b6c27bdd2f5042c, type: 3}
+      propertyPath: bugsManagerData
+      value: 
+      objectReference: {fileID: 2032059949}
     - target: {fileID: 6346490059098678281, guid: e2a19500c5278fa48b6c27bdd2f5042c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3309,6 +3363,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Btn_Script01 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4982481851455213371, guid: e2a19500c5278fa48b6c27bdd2f5042c, type: 3}
+      propertyPath: bugsManagerData
+      value: 
+      objectReference: {fileID: 2032059949}
     - target: {fileID: 6346490059098678281, guid: e2a19500c5278fa48b6c27bdd2f5042c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3448,6 +3506,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Btn_Script01 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 4982481851455213371, guid: e2a19500c5278fa48b6c27bdd2f5042c, type: 3}
+      propertyPath: bugsManagerData
+      value: 
+      objectReference: {fileID: 2032059949}
     - target: {fileID: 6346490059098678281, guid: e2a19500c5278fa48b6c27bdd2f5042c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3636,6 +3698,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Btn_Script01
       objectReference: {fileID: 0}
+    - target: {fileID: 4982481851455213371, guid: e2a19500c5278fa48b6c27bdd2f5042c, type: 3}
+      propertyPath: bugsManagerData
+      value: 
+      objectReference: {fileID: 2032059949}
     - target: {fileID: 6346490059098678281, guid: e2a19500c5278fa48b6c27bdd2f5042c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
