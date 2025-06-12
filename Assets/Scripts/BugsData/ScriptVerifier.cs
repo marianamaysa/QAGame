@@ -30,7 +30,7 @@ public class ScriptVerifier : MonoBehaviour, IPointerDownHandler, IPointerUpHand
             timeToAnswer = acceleratedTimeToAnswer;
             BugsManagerData.Instance.SpeedCode();
             speedTriggered = true;  
-            Debug.Log("[Verifier] Aceleração aplicada: timeToAnswer = " + timeToAnswer);
+            Debug.Log("aceleracao aplicada: timeToAnswer = " + timeToAnswer);
         }
     }
 
@@ -49,16 +49,26 @@ public class ScriptVerifier : MonoBehaviour, IPointerDownHandler, IPointerUpHand
 
     private void OnPointerHeldEnough()
     {
-        Debug.Log("[Verifier] Resolução completa em: " + pointerHoldTime + "s");
-        // Restaurar tempo padrão
+        Debug.Log("resolucao completa em: " + pointerHoldTime + "s");
+
         timeToAnswer = originalTimeToAnswer;
-        Debug.Log("[Verifier] Restaurado timeToAnswer = " + timeToAnswer);
+        Debug.Log("restaurado timeToAnswer = " + timeToAnswer);
 
         if (isBugged && !bugFound)
         {
             bugFound = true;
             BugsManagerData.Instance.AddSliderPoints();
+
+            var bs = GetComponent<ButtonsScripts>();
+            if (bs != null)
+                bs.bugFound = true;
         }
+        else
+        {
+            Debug.Log("codigo correto");
+        }
+
+        timeToAnswer = originalTimeToAnswer;
     }
 
     public void OnPointerUp(PointerEventData eventData)

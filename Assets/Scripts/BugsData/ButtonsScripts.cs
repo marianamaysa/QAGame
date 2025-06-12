@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class ButtonsScripts : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
-     public bool isBugged = false;
+    public bool isBugged = false;
+    public bool bugFound = false;
     [SerializeField] private Sprite codeSpriteCorrect;
     [SerializeField] private Sprite codeSpriteBugged;
     [SerializeField] private GameObject answerImage;
@@ -47,8 +48,11 @@ public class ButtonsScripts : MonoBehaviour, IPointerDownHandler, IPointerUpHand
 
     public void SetBugged()
     {
-        isBugged = true;
-        GetComponent<SpriteRenderer>().sprite = codeSpriteBugged;
+        if (!isBugged)
+        {
+            isBugged = true;
+            GetComponent<SpriteRenderer>().sprite = codeSpriteBugged;
+        }
     }
 
     public void SetCorrect()

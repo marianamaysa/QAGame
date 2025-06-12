@@ -57,12 +57,12 @@ public class BugsManagerData : MonoBehaviour
     {
         if (!isUsedOnce)
         {
-            Debug.Log("[BugsManager] Aceleracao liberada");
+            Debug.Log("aceleracao liberada");
             canSpeed = true;
         }
         else
         {
-            Debug.LogWarning("[BugsManager] Aceleracao ja foi usada");
+            Debug.LogWarning("aceleracao ja foi usada");
         }
     }
     public void SpeedCode()
@@ -79,7 +79,7 @@ public class BugsManagerData : MonoBehaviour
         Debug.Log("timerWaitPerButton set to speedValue = " + speedValue);
         ResetTimersForAllButtons();
 
-        Debug.Log("Waiting for " + duration + " seconds...");
+        Debug.Log("waiting for " + duration + " seconds...");
         yield return new WaitForSeconds(duration);
 
         timerWaitPerButton = original;
@@ -91,14 +91,14 @@ public class BugsManagerData : MonoBehaviour
     {
         foreach (var button in buttonObjects)
             button.GetComponent<ButtonsScripts>().SetTimeToAnswer(timerWaitPerButton);
-        Debug.Log("All ButtonsScripts updated to timerWaitPerButton = " + timerWaitPerButton);
+        Debug.Log("all ButtonsScripts updated to timerWaitPerButton = " + timerWaitPerButton);
     }
 
     private void UpdateButtonTimer()
     {
         foreach (var button in buttonObjects)
             button.GetComponent<ButtonsScripts>().SetTimeToAnswer(timerWaitPerButton);
-        Debug.Log("All ButtonsScripts updated to timerWaitPerButton = " + timerWaitPerButton);
+        Debug.Log("all ButtonsScripts updated to timerWaitPerButton = " + timerWaitPerButton);
     }
 
     public void RandomImagesAndBugs()
@@ -147,7 +147,7 @@ public class BugsManagerData : MonoBehaviour
         }
         else
         {
-            Debug.Log("Slider is already at maximum value.");
+            Debug.Log("slider is already at maximum value.");
         }
     }
 
@@ -193,11 +193,15 @@ public class BugsManagerData : MonoBehaviour
 
     private void RevealBug()
     {
-        var btn = buttonObjects
-            .FirstOrDefault(b => b.GetComponent<ButtonsScripts>().isBugged);
+        var btn = buttonObjects.FirstOrDefault(b => {
+            var s = b.GetComponent<ButtonsScripts>();
+            return s.isBugged && !s.bugFound;
+        });
 
         if (btn != null)
             StartCoroutine(FlashButton(btn, 4, 0.3f));
+        else
+            Debug.Log("nenhum bug");
     }
 
     private IEnumerator FlashButton(GameObject btn, int flashes, float flashDuration)
@@ -205,7 +209,6 @@ public class BugsManagerData : MonoBehaviour
         var img = btn.GetComponent<Image>();
         if (img == null)
         {
-            Debug.LogError($"[RevealBug] Image component não encontrado em {btn.name}");
             yield break;
         }
 
