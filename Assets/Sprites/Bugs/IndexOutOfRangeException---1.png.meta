@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      IndexOutOfRangeException---1_0: 1465404544380834833
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

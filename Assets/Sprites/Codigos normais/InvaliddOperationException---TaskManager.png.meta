@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      InvaliddOperationException---TaskManager_0: -4457441119804617929
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
